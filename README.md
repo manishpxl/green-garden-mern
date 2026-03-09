@@ -7,29 +7,25 @@ Green Garden is a full-stack MERN application designed to provide an online plat
 ## 🚀 Tech Stack
 
 ### Frontend
-
-* React.js
-* HTML5
-* CSS3
-* JavaScript
-* Axios
+- React.js
+- HTML5
+- CSS3
+- JavaScript
+- Axios
 
 ### Backend
-
-* Node.js
-* Express.js
+- Node.js
+- Express.js
 
 ### Database
-
-* MongoDB
-* Mongoose
+- MongoDB
+- Mongoose
 
 ### Tools
-
-* Git
-* GitHub
-* Thunder Client
-* VS Code
+- Git
+- GitHub
+- Thunder Client
+- VS Code
 
 ---
 
@@ -57,13 +53,13 @@ green-garden-mern
 
 ## ✨ Features
 
-* User Registration and Login
-* Secure Authentication (JWT)
-* Product Listing
-* Add to Cart functionality
-* Order Management
-* Responsive UI
-* REST API Integration
+- User Registration and Login
+- Secure Authentication (JWT)
+- Product Listing
+- Add to Cart functionality
+- Order Management
+- Responsive UI
+- REST API Integration
 
 ---
 
@@ -126,7 +122,36 @@ JWT_SECRET=your_secret_key
 
 ## 🌐 Deployment
 
-Frontend can be deployed using **Vercel / Netlify** and backend using **Render / Railway** with MongoDB Atlas as the database.
+Frontend can be deployed using **Vercel / Netlify** and backend using **Render / Railway** with **MongoDB Atlas** as the database.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+If you would like to contribute to this project:
+
+1. Fork the repository  
+2. Create your feature branch  
+
+```
+git checkout -b feature/your-feature-name
+```
+
+3. Commit your changes  
+
+```
+git commit -m "Add your feature"
+```
+
+4. Push to the branch  
+
+```
+git push origin feature/your-feature-name
+```
+
+5. Open a Pull Request
 
 ---
 
@@ -134,8 +159,14 @@ Frontend can be deployed using **Vercel / Netlify** and backend using **Render /
 
 **Manish Kumar**
 
-GitHub: https://github.com/manishpxl
+GitHub: https://github.com/manishpxl  
 LinkedIn: https://www.linkedin.com/in/manish-kumar-7b0535229/
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, please consider giving it a **star ⭐ on GitHub**.
 
 ---
 
