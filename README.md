@@ -28,7 +28,7 @@ Green Garden is a full-stack MERN application designed to provide an online plat
 
 * Git
 * GitHub
-* Postman
+* Thunder Client
 * VS Code
 
 ---
