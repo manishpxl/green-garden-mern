@@ -1,62 +1,184 @@
-.homepage-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* ===== PAGE CONTAINER ===== */
+
+.homepage-container{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
-.hero-section {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Add placeholder background if image not found */
-    background: linear-gradient(135deg, #c8e6c9 0%, #81c784 50%, #4caf50 100%);
-    background-color: #e5ecd6;
-    padding: 40px;
-    position: relative;
+
+/* ===== HERO SECTION ===== */
+
+.hero-section{
+    flex:1;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+    position:relative;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.4);
+
+/* ===== OVERLAY ===== */
+
+.hero-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.45);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+/* ===== HERO CARD ===== */
+
+.hero-card{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    width:100%;
+
+    padding:45px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(8px);
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,0.25);
 }
 
-.hero-content h1 {
-    color: #2e7d32;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+
+/* ===== TITLE ===== */
+
+.hero-title{
+    font-size:2.6rem;
+    font-weight:700;
+    margin-bottom:18px;
+    color:#2e7d32;
 }
 
-.hero-content p {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.6;
+.hero-title span{
+    color:#1b5e20;
 }
 
-.contact-details {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    margin-top: 20px;
+
+/* ===== DESCRIPTION ===== */
+
+.hero-description{
+    font-size:1.1rem;
+    line-height:1.7;
+    color:#333;
+    margin-bottom:28px;
 }
 
-.contact-details p {
-    margin-bottom: 5px;
-    font-size: 1rem;
+
+/* ===== BUTTON AREA ===== */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+
+/* ===== PRIMARY BUTTON ===== */
+
+.primary-btn{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    font-size:1rem;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.primary-btn:hover{
+    background:#1b5e20;
+    transform:translateY(-2px);
+}
+
+
+/* ===== SECONDARY BUTTON ===== */
+
+.secondary-btn{
+    background:white;
+    color:#2e7d32;
+    border:2px solid #2e7d32;
+    padding:12px 24px;
+    font-size:1rem;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.secondary-btn:hover{
+    background:#2e7d32;
+    color:white;
+}
+
+
+/* ===== CONTACT BOX ===== */
+
+.contact-box{
+    border-top:1px solid #ddd;
+    padding-top:18px;
+}
+
+.contact-box h3{
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    font-size:0.95rem;
+    color:#444;
+    margin:4px 0;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width:768px){
+
+.hero-card{
+    padding:30px;
+}
+
+.hero-title{
+    font-size:2rem;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.primary-btn,
+.secondary-btn{
+    width:100%;
+}
+
+}
+
+
+@media (max-width:480px){
+
+.hero-title{
+    font-size:1.7rem;
+}
+
+.hero-description{
+    font-size:0.95rem;
+}
+
 }

@@ -1,164 +1,207 @@
-.review-form-container {
-    max-width: 600px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
+/* PAGE BACKGROUND */
 
-.review-form-container h2 {
-    color: #2e7d32;
-    margin: 0 0 5px 0;
-    text-align: center;
-}
-
-.subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 25px;
-    font-size: 0.95rem;
-}
-
-.review-plant-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    padding: 15px;
-    background: #f1f8f1;
-    border-radius: 8px;
-}
-
-.review-plant-info img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.review-plant-info h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.review-plant-info p {
-    margin: 5px 0 0 0;
-    font-size: 0.9rem;
-    color: #666;
+.user-page{
+    min-height:100vh;
+    background:#f5f7f6;
+    padding:40px 20px;
 }
 
 
-.review-form-container .subtitle {
-    color: #666;
-    text-align: center;
-    margin-bottom: 30px;
+/* REVIEW CONTAINER */
+
+.review-form-container{
+    max-width:600px;
+    margin:40px auto;
+    background:#ffffff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
-.review-form {
-    display: flex;
-    flex-direction: column;
+
+/* TITLE */
+
+.review-form-container h2{
+    color:#2e7d32;
+    text-align:center;
+    margin-bottom:5px;
 }
 
-.rating-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 25px;
+.subtitle{
+    text-align:center;
+    color:#777;
+    margin-bottom:30px;
+    font-size:0.95rem;
 }
 
-.rating-group label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #444;
+
+/* PLANT INFO */
+
+.review-plant-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:30px;
+    padding:15px;
+    background:#f1f8f1;
+    border-radius:8px;
 }
 
-.star-rating {
-    display: flex;
-    gap: 10px;
+.review-plant-info img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:6px;
 }
 
-.star-icon {
-    cursor: pointer;
-    color: #e0e0e0;
-    transition: color 0.2s, transform 0.2s;
+.review-plant-info h3{
+    margin:0;
+    font-size:1.1rem;
+    color:#333;
 }
 
-.star-icon:hover {
-    transform: scale(1.1);
+.review-plant-info p{
+    margin:4px 0 0;
+    font-size:0.9rem;
+    color:#666;
 }
 
-.star-icon.filled {
-    color: #ffc107;
-    fill: #ffc107;
+
+/* FORM */
+
+.review-form{
+    display:flex;
+    flex-direction:column;
 }
 
-.review-form .form-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
+
+/* STAR RATING */
+
+.rating-group{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:25px;
 }
 
-.review-form label {
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #555;
+.rating-group label{
+    font-weight:600;
+    margin-bottom:10px;
+    color:#444;
 }
 
-.review-form textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-    resize: vertical;
+.star-rating{
+    display:flex;
+    gap:10px;
 }
 
-.review-form textarea:focus {
-    outline: none;
-    border-color: #2e7d32;
+.star-icon{
+    cursor:pointer;
+    color:#e0e0e0;
+    transition:0.2s;
 }
 
-.error-text {
-    color: #d32f2f;
-    font-size: 0.85rem;
-    margin-top: 5px;
+.star-icon:hover{
+    transform:scale(1.1);
 }
 
-.review-form .form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    margin-top: 10px;
+.star-icon.filled{
+    color:#ffc107;
 }
 
-.review-form .btn-submit,
-.review-form .btn-cancel {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
+
+/* TEXTAREA */
+
+.review-form .form-group{
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
 }
 
-.review-form .btn-submit {
-    background-color: #2e7d32;
-    color: white;
+.review-form label{
+    font-weight:500;
+    margin-bottom:8px;
+    color:#555;
 }
 
-.review-form .btn-submit:hover {
-    background-color: #1b5e20;
+.review-form textarea{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:0.95rem;
 }
 
-.review-form .btn-cancel {
-    background-color: #f5f5f5;
-    color: #555;
-    border: 1px solid #ddd;
+.review-form textarea:focus{
+    outline:none;
+    border-color:#2e7d32;
 }
 
-.review-form .btn-cancel:hover {
-    background-color: #e0e0e0;
+
+/* BUTTONS */
+
+.form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+    margin-top:10px;
+}
+
+.btn-submit,
+.btn-cancel{
+    padding:10px 22px;
+    border-radius:6px;
+    font-size:0.95rem;
+    cursor:pointer;
+}
+
+.btn-submit{
+    background:#2e7d32;
+    color:white;
+    border:none;
+}
+
+.btn-submit:hover{
+    background:#1b5e20;
+}
+
+.btn-cancel{
+    background:#f5f5f5;
+    border:1px solid #ddd;
+}
+
+.btn-cancel:hover{
+    background:#e0e0e0;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:768px){
+
+.review-form-container{
+    padding:30px 20px;
+}
+
+}
+
+@media (max-width:480px){
+
+.review-form-container{
+    padding:25px 18px;
+}
+
+.review-plant-info{
+    flex-direction:column;
+    text-align:center;
+}
+
+.form-actions{
+    flex-direction:column;
+}
+
+.btn-submit,
+.btn-cancel{
+    width:100%;
+}
+
 }

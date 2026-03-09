@@ -1,178 +1,195 @@
-.top-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Gradient from screenshot: green to tan/brown */
-    background: linear-gradient(to right, #4caf50 0%, #a5d6a7 40%, #d7ccc8 70%, #8d6e63 100%);
-    color: #fff;
-    padding: 0 20px;
-    height: 60px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ===============================
+   NAVBAR CONTAINER
+================================= */
+
+.top-navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:60px;
+    padding:0 22px;
+
+    background:linear-gradient(
+        to right,
+        #4caf50 0%,
+        #a5d6a7 40%,
+        #d7ccc8 70%,
+        #8d6e63 100%
+    );
+
+    color:white;
+    position:relative;
+    z-index:1000;
 }
 
-.navbar-brand-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.5px;
+/* ===============================
+   BRAND
+================================= */
+
+.navbar-brand-text{
+    font-size:1.5rem;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
-.navbar-right-section {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+/* ===============================
+   RIGHT SECTION
+================================= */
+
+.navbar-right-section{
+    display:flex;
+    align-items:center;
+    gap:22px;
 }
 
-.user-badge {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 4px 15px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #fff;
+/* ===============================
+   NAV LINKS
+================================= */
+
+.navbar-nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.navbar-nav-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.nav-link{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    font-size:0.95rem;
+    transition:all .2s ease;
 }
 
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: opacity 0.2s;
+.nav-link:hover{
+    opacity:.8;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    opacity: 0.8;
+.nav-link.active{
+    font-weight:600;
 }
 
-.nav-dropdown {
-    position: relative;
-    display: inline-block;
+/* ===============================
+   USER BADGE
+================================= */
+
+.user-badge{
+    border:1px solid rgba(255,255,255,0.7);
+    border-radius:20px;
+    padding:5px 14px;
+    font-size:0.85rem;
 }
 
-.nav-dropdown-btn {
-    color: #fff;
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
+/* ===============================
+   LOGOUT BUTTON
+================================= */
+
+.nav-logout-btn{
+    background:#f44336;
+    border:none;
+    padding:7px 16px;
+    border-radius:5px;
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.2s;
 }
 
-.nav-dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    min-width: 150px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    z-index: 10;
+.nav-logout-btn:hover{
+    background:#d32f2f;
 }
 
-.nav-dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.9rem;
+/* ===============================
+   HAMBURGER
+================================= */
+
+.hamburger{
+    display:none;
+    cursor:pointer;
 }
 
-.nav-dropdown-content a:hover {
-    background-color: #f4f8f4;
-    color: #2e7d32;
+/* ===============================
+   MOBILE NAVBAR
+================================= */
+
+@media(max-width:900px){
+
+/* show hamburger */
+
+.hamburger{
+    display:block;
 }
 
-.nav-dropdown:hover .nav-dropdown-content {
-    display: block;
+/* mobile menu container */
+
+.navbar-right-section{
+    position:fixed;
+    top:60px;
+    right:0;
+
+    width:260px;
+    height:calc(100vh - 60px);
+
+    background:white;
+
+    flex-direction:column;
+    align-items:flex-start;
+    padding:25px 22px;
+    gap:20px;
+
+    box-shadow:-3px 0 12px rgba(0,0,0,0.15);
+
+    transform:translateX(100%);
+    transition:transform .3s ease;
 }
 
-.nav-logout-btn {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 6px 16px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
+/* open state */
+
+.navbar-right-section.open{
+    transform:translateX(0);
 }
 
-.nav-logout-btn:hover {
-    background-color: #d32f2f;
+/* vertical links */
+
+.navbar-nav-links{
+    flex-direction:column;
+    align-items:flex-start;
+    width:100%;
+    gap:16px;
 }
 
-/* Logout Modal */
-.logout-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
+/* link color for white bg */
+
+.nav-link{
+    color:#333;
+    font-size:0.96rem;
 }
 
-.logout-modal-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
+/* user badge */
+
+.user-badge{
+    color:#333;
 }
 
-.logout-modal-card p {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 25px;
+/* logout button */
+
+.nav-logout-btn{
+    width:100%;
 }
 
-.logout-modal-actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+/* spacing */
+
+.navbar-right-section .user-badge{
+    margin-bottom:10px;
 }
 
-.btn-confirm-logout {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
 }
 
-.btn-confirm-logout:hover {
-    background-color: #43a047;
-}
-
-.btn-cancel-logout {
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.btn-cancel-logout:hover {
-    background-color: #d32f2f;
+.menu-backdrop{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+z-index:900;
 }

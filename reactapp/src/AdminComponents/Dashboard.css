@@ -1,115 +1,186 @@
-.dashboard-container {
-    padding: 30px;
-    background-color: #f4f8f4;
-    min-height: calc(100vh - 60px);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ================= DASHBOARD PAGE ================= */
+
+.dashboard-page{
+    background:#f5f7fb;
+    min-height:100vh;
 }
 
-.dashboard-header-section {
-    margin-bottom: 20px;
+/* ================= CONTAINER ================= */
+
+.dashboard-container{
+    padding:30px;
+    max-width:1400px;
+    margin:auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.dashboard-header-section h2 {
-    margin: 0 0 5px 0;
-    color: #2c3e50;
-    font-size: 1.8rem;
+/* ================= HEADER ================= */
+
+.dashboard-header-section{
+    margin-bottom:25px;
 }
 
-.dashboard-header-section p {
-    margin: 0;
-    color: #666;
+.dashboard-header-section h2{
+    font-size:28px;
+    color:#2c3e50;
+    margin-bottom:5px;
 }
 
-.dashboard-banner {
-    margin-bottom: 30px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background-color: #e0e0e0;
+.dashboard-header-section p{
+    color:#777;
+    font-size:15px;
 }
 
-.banner-placeholder {
-    width: 100%;
-    height: 250px;
-    background: linear-gradient(135deg, #a5d6a7, #4caf50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ================= BANNER ================= */
+
+.dashboard-banner{
+    width:100%;
+    border-radius:12px;
+    overflow:hidden;
+    margin-bottom:35px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
-.banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.banner-placeholder{
+    width:100%;
+    height:260px;
+    background:linear-gradient(135deg,#81c784,#43a047);
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.dashboard-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
+.banner-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.stat-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 20px;
-    border-radius: 12px;
-    color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+/* ================= STATS GRID ================= */
+
+.dashboard-stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:40px;
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+/* ================= CARD ================= */
+
+.stat-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px;
+    border-radius:12px;
+    color:white;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:all 0.25s ease;
 }
 
-.stat-info h3 {
-    font-size: 2.2rem;
-    margin: 0 0 5px 0;
-    font-weight: 700;
+.stat-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.stat-info p {
-    margin: 0;
-    font-size: 1rem;
-    opacity: 0.9;
-    font-weight: 500;
+/* ================= CARD TEXT ================= */
+
+.stat-info h3{
+    font-size:30px;
+    margin:0;
+    font-weight:700;
 }
 
-.stat-icon {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.stat-info p{
+    margin-top:5px;
+    font-size:15px;
+    opacity:0.9;
 }
 
-/* Gradients matching screenshot */
-.stat-blue {
-    background: linear-gradient(to right, #42a5f5, #64b5f6);
+/* ================= ICON ================= */
+
+.stat-icon{
+    background:rgba(255,255,255,0.25);
+    padding:14px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.stat-orange {
-    background: linear-gradient(to right, #ffa726, #ffb74d);
+/* ================= CARD COLORS ================= */
+
+.stat-blue{
+    background:linear-gradient(135deg,#42a5f5,#1e88e5);
 }
 
-.stat-purple {
-    background: linear-gradient(to right, #ab47bc, #ba68c8);
+.stat-orange{
+    background:linear-gradient(135deg,#ffa726,#fb8c00);
 }
 
-.stat-green {
-    background: linear-gradient(to right, #66bb6a, #81c784);
+.stat-purple{
+    background:linear-gradient(135deg,#ab47bc,#8e24aa);
 }
 
-.admin-footer-contact {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #666;
-    font-size: 0.9rem;
+.stat-green{
+    background:linear-gradient(135deg,#66bb6a,#43a047);
+}
+
+/* ================= FOOTER ================= */
+
+.admin-footer-contact{
+    text-align:center;
+    padding-top:25px;
+    border-top:1px solid #e0e0e0;
+    color:#777;
+    font-size:14px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:1024px){
+
+.dashboard-stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.banner-placeholder{
+    height:200px;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:600px){
+
+.dashboard-container{
+    padding:20px 15px;
+}
+
+.dashboard-header-section h2{
+    font-size:22px;
+}
+
+.dashboard-stats-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.stat-card{
+    padding:18px;
+}
+
+.stat-info h3{
+    font-size:26px;
+}
+
+.banner-placeholder{
+    height:160px;
+}
+
+.admin-footer-contact{
+    font-size:12px;
+}
+
 }

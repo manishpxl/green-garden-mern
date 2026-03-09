@@ -1,49 +1,47 @@
+/* ===== Page Background ===== */
+
 .add-plant-wrapper {
-    background-color: #f4f8f4;
     min-height: calc(100vh - 60px);
+    background: #f4f8f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* ===== Card Layout ===== */
+
 .add-plant-layout {
-    display: flex;
-    max-width: 1000px;
     width: 100%;
+    max-width: 1000px;
+    display: flex;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
 }
+
+/* ===== Image Section ===== */
 
 .add-plant-image-col {
     flex: 1;
-    display: none;
-}
-
-@media (min-width: 768px) {
-    .add-plant-image-col {
-        display: block;
-        max-width: 45%;
-    }
+    min-height: 450px;
 }
 
 .add-plant-image-col img {
     width: 100%;
     height: 100%;
-    object-fit: right;
-    /* Align left side of img */
-    background: #a5d6a7;
+    object-fit: cover;
 }
+
+/* ===== Form Section ===== */
 
 .add-plant-form-col {
     flex: 1;
     padding: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .add-plant-form-card {
@@ -51,12 +49,13 @@
 }
 
 .add-plant-form-card h2 {
+    text-align: center;
     color: #2e7d32;
-    margin-top: 0;
     margin-bottom: 25px;
     font-size: 1.8rem;
-    text-align: center;
 }
+
+/* ===== Form Fields ===== */
 
 .add-plant-form {
     display: flex;
@@ -71,31 +70,32 @@
     display: block;
     margin-bottom: 6px;
     font-weight: 500;
-    color: #555;
-    font-size: 0.95rem;
+    color: #444;
 }
 
+/* Inputs */
+
 .form-group-single input,
-.form-group-single select,
 .form-group-single textarea,
+.form-group-single select,
 .form-group-half input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
     border-radius: 6px;
+    border: 1px solid #ddd;
     font-size: 0.95rem;
     outline: none;
-    transition: border-color 0.2s;
-    background-color: #fcfcfc;
+    transition: 0.2s;
 }
 
 .form-group-single input:focus,
-.form-group-single select:focus,
 .form-group-single textarea:focus,
+.form-group-single select:focus,
 .form-group-half input:focus {
     border-color: #4caf50;
-    background-color: #fff;
 }
+
+/* ===== Two Column Row ===== */
 
 .form-row {
     display: flex;
@@ -111,20 +111,19 @@
     display: block;
     margin-bottom: 6px;
     font-weight: 500;
-    color: #555;
-    font-size: 0.95rem;
 }
+
+/* ===== Error ===== */
 
 .error-text {
     color: #d32f2f;
     font-size: 0.85rem;
-    margin-top: 5px;
-    display: block;
 }
+
+/* ===== Image Preview ===== */
 
 .img-preview {
     margin-top: 10px;
-    max-width: 100%;
     height: 120px;
     border: 1px dashed #ccc;
     border-radius: 6px;
@@ -132,51 +131,78 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: #fafafa;
 }
 
 .img-preview img {
     height: 100%;
-    object-fit: contain;
 }
 
+/* ===== Buttons ===== */
+
 .add-plant-actions {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
 }
 
 .btn-add-submit {
-    width: 100%;
     padding: 14px;
-    background-color: #4caf50;
-    color: white;
     border: none;
     border-radius: 6px;
-    font-size: 1.05rem;
-    font-weight: bold;
+    background: #4caf50;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
 .btn-add-submit:hover {
-    background-color: #43a047;
+    background: #43a047;
 }
 
 .btn-add-cancel {
-    width: 100%;
     padding: 12px;
-    background-color: transparent;
-    color: #777;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 1rem;
+    background: transparent;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
 }
 
 .btn-add-cancel:hover {
-    background-color: #f5f5f5;
-    color: #333;
+    background: #f5f5f5;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+
+.add-plant-layout {
+    flex-direction: column;
+}
+
+.add-plant-image-col {
+    height: 250px;
+}
+
+.add-plant-form-col {
+    padding: 30px;
+}
+
+.form-row {
+    flex-direction: column;
+}
+
+}
+
+@media (max-width: 480px) {
+
+.add-plant-wrapper {
+    padding: 20px 10px;
+}
+
+.add-plant-form-card h2 {
+    font-size: 1.5rem;
+}
+
 }
