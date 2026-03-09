@@ -1,0 +1,140 @@
+.reviews-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-filters {
+    display: flex;
+    gap: 15px;
+}
+
+.sort-filter select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 0.95rem;
+    color: #555;
+    outline: none;
+}
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.review-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.review-body {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.quote-icon {
+    color: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-link:hover {
+    background-color: #e8f5e9;
+}
+
+.product-modal {
+    max-width: 450px;
+}
+
+.product-modal-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-product-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.modal-product-details h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.modal-product-details .category {
+    color: #666;
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    background: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.modal-product-details .price {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
