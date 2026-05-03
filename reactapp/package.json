@@ -26,5 +26,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "name": "reactapp",
+  "version": "1.0.0",
+  "main": "apiConfig.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

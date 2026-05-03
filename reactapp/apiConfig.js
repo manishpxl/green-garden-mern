@@ -1,5 +1,5 @@
 const apiConfig = {
-    baseUrl: "http://localhost:3000/api/db/users/"  // ✅ include /db
+  baseUrl: process.env.REACT_APP_API_URL || "http://localhost:5000/api/db/users/"
 };
 
 export default apiConfig;
